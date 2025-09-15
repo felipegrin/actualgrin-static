@@ -7,17 +7,18 @@
 <body>
   <h1>Budget Data</h1>
   <pre id="budget">Loading...</pre>
-     <pre id="budget2">Loading...</pre>
-
+    <pre id="budget2">Loading...</pre>
   <script>
     async function fetchBudget() {
       try {
         const response = await fetch('/.netlify/functions/getBudget');
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
-        const data2 = await response;
         document.getElementById('budget').textContent = JSON.stringify(data, null, 2);
-                document.getElementById('budget2').textContent = JSON.stringify(data2, null, 2);
+                document.getElementById('budget2').textContent = data.fromLastMonth;
+                console.log(data.fromLastMonth);
+                const lek = JSON.stringify(data);
+                 console.log(lek.fromLastMonth);
       } catch (err) {
         console.error('Error fetching budget:', err);
         document.getElementById('budget').textContent = 'Error fetching budget';

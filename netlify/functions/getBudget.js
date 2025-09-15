@@ -19,19 +19,15 @@ exports.handler = async () => {
     });
 
     // Download the full budget
-    const budget = await api.downloadBudget('1bc93ff2-c30a-4f25-9c36-8572ba72df56');
-    console.log(budget);
+    await api.downloadBudget('1bc93ff2-c30a-4f25-9c36-8572ba72df56');
 
     // Download a specific month
-    const budget2 = await api.getBudgetMonth('2025-09'); // use api.getBudgetMonth
-    console.log(budget2);
+    const budget = await api.getBudgetMonth('2025-09'); // use api.getBudgetMonth
+    console.log(budget);
 
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        fullBudget: budget,
-        monthBudget: budget2,
-      }),
+      body: JSON.stringify({budget}),
     };
   } catch (error) {
     console.error(error);
