@@ -26,8 +26,7 @@ exports.handler = async () => {
     console.log(budget);
 
     return {
-      statusCode: 200,
-      body: JSON.stringify({budget}),
+      budget
     };
   } catch (error) {
     console.error(error);
