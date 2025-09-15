@@ -9,6 +9,9 @@ exports.handler = async () => {
     });
 
     const budget = await api.downloadBudget('1bc93ff2-c30a-4f25-9c36-8572ba72df56');
+    console.log(budget);
+    const budget2 = await getBudgetMonth('2025-09');
+    console.log(budge2);
 
     return {
       statusCode: 200,
