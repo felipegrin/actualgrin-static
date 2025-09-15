@@ -1,0 +1,7 @@
+{
+  "name": "actual-netlify-demo",
+  "version": "1.0.0",
+  "dependencies": {
+    "@actual-app/api": "^2.0.0"
+  }
+}
