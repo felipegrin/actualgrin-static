@@ -19,6 +19,9 @@
                 console.log(data.fromLastMonth);
                 const lek = JSON.stringify(data);
                  console.log(lek.fromLastMonth);
+                 console.log(JSON.stringify(data, null, 2));
+                 console.log(data);
+                 
       } catch (err) {
         console.error('Error fetching budget:', err);
         document.getElementById('budget').textContent = 'Error fetching budget';
