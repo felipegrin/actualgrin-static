@@ -1,7 +1,14 @@
 {
-  "name": "actual-netlify-demo",
+  "name": "lek",
   "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "@actual-app/api": "^2.0.0"
+    "@actual-app/api": "^25.9.0"
   }
 }
