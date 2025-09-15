@@ -17,7 +17,7 @@
         document.getElementById('budget').textContent = JSON.stringify(data, null, 2);
                 document.getElementById('budget2').textContent = data.fromLastMonth;
                 console.log(data.fromLastMonth);
-                const lek = JSON.stringify(data);
+                const lek = JSON.stringify(data, null, 2);
                  console.log(lek);
                  console.log(lek.budget.fromLastMonth);
                  console.log(JSON.stringify(data, null, 2));
