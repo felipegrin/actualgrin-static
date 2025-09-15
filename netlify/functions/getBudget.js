@@ -1,10 +1,19 @@
 const api = require('@actual-app/api');
+const password = process.env.ACTUAL_PASSWORD;
+
+if (!password) {
+  return {
+    statusCode: 500,
+    body: JSON.stringify({ error: 'ACTUAL_PASSWORD is not defined' }),
+  };
+}
+
 
 exports.handler = async () => {
   try {
     await api.init({
       serverURL: "https://actualgrin.pikapod.net",
-      password: process.env.ACTUAL_PASSWORD, // store password in env variables
+      password: password, // store password in env variables
       dataDir: '/tmp', // temporary storage for serverless functions
     });
 
